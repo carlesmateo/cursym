@@ -20,15 +20,20 @@ int main(int argc,char *argv[])
 	QApplication *my=new QApplication(argc,argv);
 	QMainWindow x;
 
-	QString ss="Pound: " + QString(163) + "\nEuro: " + QChar(8364) + "\nDollar: " + QString(36) + "\nCent: " + QString(162) +
-				"\n\nCopyright: " + QString(169)+ QString(174) + "\n\n"
-				"Catalan characters: " + QString(231) + QString(199) + "\n";
+    // Set title
+    x.setWindowTitle("Currency Symbols by Carles Mateo");
+    // Set a fixed size
+    x.setFixedSize(350,250);
+
+    QString s_signs="Pound: " + QString(163) + "\nEuro: " + QChar(8364) + "\nDollar: " + QString(36) + "\nCent: " + QString(162) +
+                    "\n\nCopyright: " + QString(169)+ QString(174) + "\n\n"
+                    "Catalan characters: " + QString(231) + QString(199) + "\n";
 
 	//QLabel *o_lb_signs=new QLabel(ss,0);
 	//QLineEdit *o_le_signs=new QLineEdit ( ss, 0);
 
 	QTextBrowser *o_tb_signs=new QTextBrowser(0);
-	o_tb_signs->setText(ss);
+    o_tb_signs->setText(s_signs);
 
 	x.setCentralWidget(o_tb_signs);
 	x.show();
