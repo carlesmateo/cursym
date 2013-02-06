@@ -21,7 +21,8 @@ main() {
 	printf("Pound : £\n");
 	printf("Euro  : €\n");
 	printf("Dollar: $\n");
+	printf("Cent  : ¢\n");
 	printf("\n");
-	printf("Catalan characters and more: çÇàáäâèéëêìíïîòóôöùúüû·¿?¡!ªº@`'\n");
+	printf("Catalan characters and more: çÇàáäâèéëêìíïîòóôöùúüû·¿?¡!ªº@`'©®ª°\n");
 	printf("\n");
 }
