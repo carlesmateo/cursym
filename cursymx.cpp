@@ -25,7 +25,7 @@ int main(int argc,char *argv[])
 				"Catalan characters: " + QString(231) + QString(199) + "\n";
 
 	//QLabel *o_lb_signs=new QLabel(ss,0);
-	//QLineEdit *ee=new QLineEdit ( ss, 0);
+	//QLineEdit *o_le_signs=new QLineEdit ( ss, 0);
 
 	QTextBrowser *o_tb_signs=new QTextBrowser(0);
 	o_tb_signs->setText(ss);
