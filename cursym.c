@@ -13,6 +13,7 @@
 // or gcc cursym.c -o cursym-linux32bit
 // or gcc cursym.c -o cursym-linuxarm
 // Copy the executable to /usr/bin and create a symbolic link as cursym
+// sudo ln -s /usr/bin/cursym-linux64bit /usr/bin/cursym
 
 main() {
 	printf("Currencies symbols cursym V1.0 by Carles Mateo\n");
