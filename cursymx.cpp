@@ -1,15 +1,13 @@
-#include <QtGui>
-#include <QtCore>
-#include <QLabel>
-//#include <QLineEdit>
-#include <QTextBrowser>
+#include <QtGui/QApplication>
+#include "cursymx_MainWidget.h"
 
 // By Carles Mateo V.1.0
 //
 // To compile create cursymx.pro with:
 // TEMPLATE += app
 // QT += gui declarative
-// SOURCES += cursymx.cpp
+// HEADERS += cursymx_MainWidget.h
+// SOURCES += cursymx.cpp cursymx_MainWidget.cpp
 //
 // Then from the command-line: qmake cursymx.pro
 // This will generate a Makefile
@@ -17,26 +15,14 @@
 
 int main(int argc,char *argv[])
 {
-	QApplication *my=new QApplication(argc,argv);
-	QMainWindow x;
+    //QDialogButtonBox *buttonBox;
 
-    // Set title
-    x.setWindowTitle("Currency Symbols by Carles Mateo");
-    // Set a fixed size
-    x.setFixedSize(350,250);
+	QApplication *app=new QApplication(argc,argv);
 
-    QString s_signs="Pound: " + QString(163) + "\nEuro: " + QChar(8364) + "\nDollar: " + QString(36) + "\nCent: " + QString(162) +
-                    "\n\nCopyright: " + QString(169)+ QString(174) + "\n\n"
-                    "Catalan characters: " + QString(231) + QString(199) + "\n";
+	cursymx_MainWidget mainWidget;
+	mainWidget.setWindowTitle("Currency Symbols by Carles Mateo");
+	mainWidget.setFixedSize(350,250);
+	mainWidget.show();
 
-	//QLabel *o_lb_signs=new QLabel(ss,0);
-	//QLineEdit *o_le_signs=new QLineEdit ( ss, 0);
-
-	QTextBrowser *o_tb_signs=new QTextBrowser(0);
-    o_tb_signs->setText(s_signs);
-
-	x.setCentralWidget(o_tb_signs);
-	x.show();
-
-	return my->exec();
+	return app->exec();
 }
